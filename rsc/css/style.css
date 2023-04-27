@@ -10,7 +10,7 @@
     --padding-r-aside: 15px;
     --padding-l-aside: 15px;
     --padding-l-main: 15px;
-    --padding-t-main: 25px;
+    --padding-t-main: 15px;
     --margin-padrao: 15px;
 
 }
@@ -202,7 +202,7 @@
 @media screen and (max-width: 950px){
     .grade-geral{
         display: block;
-        height: 120vh;
+        height: 1000px;
                 
     }
     .grade-perfil{
