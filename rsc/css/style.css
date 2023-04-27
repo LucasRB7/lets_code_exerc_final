@@ -213,7 +213,7 @@
         margin-left: 15px;
         margin-right: 15px;
         margin-top: 15px;
-        height: 60vh;        
+        height: 1000px;        
     }
     .grade-perfil figure{
         grid-area: figure;
@@ -245,7 +245,7 @@
         justify-content: space-between;
     }    
     .email{
-        padding: 0;
+        padding:0;
     }
     .icons figure{        
         display: grid;                   
@@ -287,7 +287,7 @@
         margin-left: 15px;
         margin-right: 15px;
         margin-top: 15px;
-        height: 60vh;        
+        height: 1000px;        
     }    
     .perfil-informacao{
         display: block;
@@ -320,7 +320,7 @@
         font-size: 15px;
     }
     .controll-button button{
-        width: 220px;
+        width: 230px;
     }
 
 }
@@ -333,8 +333,8 @@
         height: 1000px;
     }
     .grade-perfil figure{
-        width: 450px;
-        height: 450px;
+        width: 350px;
+        height: 350px;
         display: flex;
         align-content: center;
     }
@@ -346,6 +346,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 25px;
+       
     }
     .controll-button img{
         width: 25px;
