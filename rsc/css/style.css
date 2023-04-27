@@ -164,7 +164,7 @@
 .icons figure{
     display: flex;
     padding-top: var(--padding-t-main);
-    width: 400px;
+    width: 100%;
     height: 130px;
 
 }
@@ -247,10 +247,30 @@
     .email{
         padding: 0;
     }
-    
-    .icons{
-        display: flex;
-        justify-content: start;
+    .icons figure{        
+        display: grid;                   
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-areas: "img1 img2 img3 img4 img5";
+    }
+    #img1{
+        grid-area: img1; 
+        width: 116px;
+    }
+    #img2{
+        grid-area: img2;
+        width: 110px;        
+    }
+    #img3{
+        grid-area: img3;
+        width: 116px;        
+    }
+    #img4{
+        grid-area: img4;
+        width: 116px;
+    }
+    #img5{
+        grid-area: img5;
+        width: 116px;
     }
     .experiencia h4{
         padding-bottom: var(--padding-t-main) ;
@@ -306,11 +326,12 @@
 
 }
 @media screen and (max-width: 590px){
+    
     .grade-perfil{
         display: flex;
         align-items: center;
         flex-direction: column;
-        height: 110vh;
+        height: 1000px;
     }
     .grade-perfil figure{
         width: 450px;
@@ -318,32 +339,50 @@
         display: flex;
         align-content: center;
     }
+    .grade-perfil img{
+        width: 300px;
+        height: 300px;
+    }
     .controll-button{
         display: flex;
         flex-direction: column;
         row-gap: 25px;
     }
+    .controll-button img{
+        width: 25px;
+        height: 25px;
+    }
     .icons figure{        
         display: grid;                   
-        grid-template-columns: 50% 50%;
-        grid-template-areas: "img1 img1"
-                             "img2 img3";
+        grid-template-columns: 33% 33% 33%;
+        grid-template-areas: "img4 img1 img2"
+                             "img5 img3 img3";
         justify-items: center;                     
 
     }
     #img1{
-        grid-area: img1;        
+        grid-area: img1;  
+        width: 116px;      
     }
     #img2{
-        grid-area: img2;
+        grid-area: img2;        
         width: 116px;
+        height: 140px;
     }
     #img3{
         grid-area: img3;
         width: 116px;
     }
+    #img4{
+        grid-area: img4;
+        width: 116px;
+    }
+    #img5{
+        grid-area: img5;
+        width: 116px;
+    }
     .formacao{
-        padding-top: 100px;
+        padding-top: 150px;
     }
     
 }
