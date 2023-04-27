@@ -138,11 +138,6 @@
     font-size: 17px; 
     display: flex;
 }
-
-
-
-
-
 .grade-conteudo{
     grid-area: conteudo;
     padding-left: var(--padding-l-main) ;
@@ -213,7 +208,7 @@
         margin-left: 15px;
         margin-right: 15px;
         margin-top: 15px;
-        height: 1000px;        
+        height: 500px;        
     }
     .grade-perfil figure{
         grid-area: figure;
