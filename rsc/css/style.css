@@ -84,7 +84,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.controll-buttom button{
+.controll-button button{
     border-radius: 50px;
     width: 270px;
     background-color: transparent;
@@ -93,23 +93,23 @@
     margin-right: var(--margin-padrao);
     
 }
-.controll-buttom button :hover{
+.controll-button button :hover{
     background-color: var(--hover-color-whats);
     transition: 0.5s;
 }
-.controll-buttom a{
+.controll-button a{
     border-radius: 50px;
     display: flex;
     text-decoration: none;  
 
 }
-.controll-buttom img{
+.controll-button img{
     width: 30px;
     height: 30px;
     padding: var(--padding-r-aside);
     
 }
-.controll-buttom h3{
+.controll-button h3{
     font-family: var(--font-padrao);
     color: var(--cor-secundaria);
     align-items: center;
@@ -158,8 +158,8 @@
 .skills ul{
     padding-left: var(--padding-l-main);
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    justify-content: space-between; 
+    grid-template-columns: 33% 33% 33%;
+    justify-content: space-evenly; 
 }
 .icons figure{
     display: flex;
@@ -206,14 +206,24 @@
                 
     }
     .grade-perfil{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: "figure informacao"
+                       "contatosBtn contatosBtn";
         margin-left: 15px;
         margin-right: 15px;
         margin-top: 15px;
         height: 60vh;        
     }
     .grade-perfil figure{
-        float: left;
+        grid-area: figure;
         display: flex;
+    }
+    .perfil-informacao{
+        grid-area: informacao;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
     }
     .grade-perfil h1{
         justify-content: center;
@@ -227,26 +237,40 @@
     .grade-perfil h4{
        padding-top: 10px ;
     }    
+    .perfil-button{
+        grid-area: contatosBtn;        
+    }   
+    .controll-button{
+        display: flex;
+        justify-content: space-between;
+    }    
+    .email{
+        padding: 0;
+    }
+    
     .icons{
         display: flex;
         justify-content: start;
-    }
-    .controll-buttom{
-        display: flex;
-        justify-content: space-evenly;        
-    }
-    .email{
-        padding: 0;
     }
     .experiencia h4{
         padding-bottom: var(--padding-t-main) ;
     }
     
 }
-@media screen and (max-width: 700px){
-    .grade-geral{
+@media screen and (max-width: 750px){
+    .grade-perfil{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: "figure figure"
+                       "informacao informacao" 
+                       "contatosBtn contatosBtn";
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+        height: 60vh;        
+    }    
+    .perfil-informacao{
         display: block;
-        height: 120vh;
     }
     .grade-perfil{
 
@@ -264,23 +288,62 @@
     .grade-perfil h4{
         padding-bottom: 40px;
     }
-    .controll-buttom{
+    .controll-button{
         display: flex;
         justify-content: space-between;
     }     
-    .controll-buttom img{
+    .controll-button img{
         width: 20px;
         height: 20px;
     }
-    .controll-buttom h3{
+    .controll-button h3{
         border-radius: 50px;
         font-size: 15px;
     }
-    .controll-buttom button{
+    .controll-button button{
         width: 220px;
     }
 
 }
 @media screen and (max-width: 590px){
+    .grade-perfil{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 110vh;
+    }
+    .grade-perfil figure{
+        width: 450px;
+        height: 450px;
+        display: flex;
+        align-content: center;
+    }
+    .controll-button{
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    .icons figure{        
+        display: grid;                   
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "img1 img1"
+                             "img2 img3";
+        justify-items: center;                     
+
+    }
+    #img1{
+        grid-area: img1;        
+    }
+    #img2{
+        grid-area: img2;
+        width: 116px;
+    }
+    #img3{
+        grid-area: img3;
+        width: 116px;
+    }
+    .formacao{
+        padding-top: 100px;
+    }
     
 }
