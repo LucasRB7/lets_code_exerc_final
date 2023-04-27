@@ -1,0 +1,286 @@
+:root{    
+    --background-color: rgb(87, 87, 87);
+    --main-color: rgb(48,48,48);
+    --aside-color: rgb(48,48,48);
+    --evidence-color: rgb(249, 136, 70);
+    --cor-secundaria: rgb(200, 200, 200);
+    --hover-color-whats: rgb(3, 157, 3);
+    --hover-color-email: rgb(83, 83, 251);
+    --font-padrao: 'Roboto', sans-serif;
+    --padding-r-aside: 15px;
+    --padding-l-aside: 15px;
+    --padding-l-main: 15px;
+    --padding-t-main: 25px;
+    --margin-padrao: 15px;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grade-geral{
+    background-color: var(--background-color) ;    
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 300px 600px;
+    grid-template-areas: "perfil conteudo";
+    height: 100vh;
+    
+}
+.grade-perfil{
+    grid-area: perfil;
+    background-color: var(--aside-color);
+    border-radius: 50px;
+    margin-top: var(--margin-padrao);
+    margin-bottom: var(--margin-padrao);
+    
+    
+}
+.grade-perfil figure{
+    width: 300px;
+    height:300px;
+    display: flex;    
+    align-items: center;
+    justify-content: center;        
+}
+.grade-perfil img{
+       
+    width: 275px;
+    height: 275px;
+    border-radius: 100%;
+}
+.grade-perfil h1{
+    font-family: var(--font-padrao);
+    font-size: 30px;
+    text-align: center;
+    color: var(--evidence-color);
+}
+.grade-perfil h2{
+    font-family: var(--font-padrao);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    color: var(--cor-secundaria);
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.grade-perfil h4{
+    font-family: var(--font-padrao);
+    color: var(--cor-secundaria);
+    font-weight: 200;
+    padding-left: var(--padding-l-aside);
+    padding-right: var(--padding-r-aside);
+    text-indent: 40px;
+    text-align: justify;
+    padding-bottom: 80px;    
+}
+.contatos{
+    font-family: var(--font-padrao);
+    color: var(--evidence-color);
+    padding-left: var(--padding-l-aside);
+    padding-right: var(--padding-r-aside);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.controll-buttom button{
+    border-radius: 50px;
+    width: 270px;
+    background-color: transparent;
+    border: 2px solid rgb(0, 11, 0);
+    margin-left: var(--margin-padrao);
+    margin-right: var(--margin-padrao);
+    
+}
+.controll-buttom button :hover{
+    background-color: var(--hover-color-whats);
+    transition: 0.5s;
+}
+.controll-buttom a{
+    border-radius: 50px;
+    display: flex;
+    text-decoration: none;  
+
+}
+.controll-buttom img{
+    width: 30px;
+    height: 30px;
+    padding: var(--padding-r-aside);
+    
+}
+.controll-buttom h3{
+    font-family: var(--font-padrao);
+    color: var(--cor-secundaria);
+    align-items: center;
+    font-size: 20px;    
+    display: flex;
+}
+.email{
+    display: flex;
+    padding-top: 5px;
+    
+}
+.email button :hover{
+    background-color: var(--hover-color-email);
+}
+.email img{
+    width: 30px;
+    height: 30px;
+    padding-right:var(--padding-r-aside);
+    padding-left: var(--padding-l-aside);
+
+}
+.email h3{
+    font-family: var(--font-padrao);
+    color: var(--cor-secundaria);
+    align-items: center;
+    font-size: 17px; 
+    display: flex;
+}
+
+
+
+
+
+.grade-conteudo{
+    grid-area: conteudo;
+    padding-left: var(--padding-l-main) ;
+    padding-top: var(--padding-t-main)      
+}
+.skills{
+    color: var(--cor-secundaria);
+    font-family: var(--font-padrao);
+}
+.skills h3{
+    color: var(--evidence-color);
+}
+.skills ul{
+    padding-left: var(--padding-l-main);
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between; 
+}
+.icons figure{
+    display: flex;
+    padding-top: var(--padding-t-main);
+    width: 400px;
+    height: 130px;
+
+}
+.icons img{
+    width: 300px;
+}
+.formacao{
+    padding-top: var(--padding-t-main);
+    color: var(--cor-secundaria);
+    font-family: var(--font-padrao);    
+}
+.formacao h3{
+    color: var(--evidence-color);
+}
+
+.formacao h4{
+    padding-top: 10px;
+}
+
+.experiencia{
+    padding-top: var(--padding-t-main);
+    color: var(--cor-secundaria);
+    font-family: var(--font-padrao);
+}
+.experiencia h3{
+    color: var(--evidence-color);
+}
+.experiencia h4{
+    padding-top: 10px;
+    text-align: justify;
+    margin-right: var(--margin-padrao);
+    
+}
+
+@media screen and (max-width: 950px){
+    .grade-geral{
+        display: block;
+        height: 120vh;
+                
+    }
+    .grade-perfil{
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+        height: 60vh;        
+    }
+    .grade-perfil figure{
+        float: left;
+        display: flex;
+    }
+    .grade-perfil h1{
+        justify-content: center;
+        align-content: center;
+        padding-top: var(--padding-t-main);
+        font-size: 40px;
+    }
+    .grade-perfil h2{
+        font-size: 16px;
+    }
+    .grade-perfil h4{
+       padding-top: 10px ;
+    }    
+    .icons{
+        display: flex;
+        justify-content: start;
+    }
+    .controll-buttom{
+        display: flex;
+        justify-content: space-evenly;        
+    }
+    .email{
+        padding: 0;
+    }
+    .experiencia h4{
+        padding-bottom: var(--padding-t-main) ;
+    }
+    
+}
+@media screen and (max-width: 700px){
+    .grade-geral{
+        display: block;
+        height: 120vh;
+    }
+    .grade-perfil{
+
+        height: 100vh;
+    }
+    .grade-perfil figure{
+        
+        width: 100%;
+        height: 450px;
+    }
+    .grade-perfil img{
+        width: 400px;
+        height: 400px;
+    }
+    .grade-perfil h4{
+        padding-bottom: 40px;
+    }
+    .controll-buttom{
+        display: flex;
+        justify-content: space-between;
+    }     
+    .controll-buttom img{
+        width: 20px;
+        height: 20px;
+    }
+    .controll-buttom h3{
+        border-radius: 50px;
+        font-size: 15px;
+    }
+    .controll-buttom button{
+        width: 220px;
+    }
+
+}
+@media screen and (max-width: 590px){
+    
+}
